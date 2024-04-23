@@ -1,3 +1,4 @@
+/*
 package com.leadryde.userapp;
 
 import android.content.ContentProviderClient;
@@ -440,3 +441,4 @@ public class BookSomeOneElsePickContactActivity extends AppCompatActivity {
     }
 
 }
+*/

@@ -15,7 +15,6 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.leadryde.userapp.BookSomeOneElsePickContactActivity;
 import com.leadryde.userapp.R;
 import com.leadryde.userapp.SearchLocationActivity;
 import com.general.files.GeneralFunctions;
@@ -61,7 +60,7 @@ public class BookSomeOneContactListAdapter extends RecyclerView.Adapter<Recycler
     private final int btnRadius;
 
     public BookSomeOneContactListAdapter(RecyclerView recyclerView, Context mContext, List<ContactModel> list, GeneralFunctions generalFunctions, boolean isFooterEnabled) {
-        this.list = (mContext instanceof BookSomeOneElsePickContactActivity) ? ((BookSomeOneElsePickContactActivity) mContext).finalList : list;
+        this.list = list;
         this.contactListFiltered = list;
         this.mContext = mContext;
         this.generalFunc = generalFunctions;
@@ -130,10 +129,6 @@ public class BookSomeOneContactListAdapter extends RecyclerView.Adapter<Recycler
 
             if (mContext instanceof SearchLocationActivity && item.mobileNumber.equalsIgnoreCase(selectedNum)) {
                 viewHolder.imgSelected.setVisibility(View.VISIBLE);
-            } else if (mContext instanceof BookSomeOneElsePickContactActivity && ((BookSomeOneElsePickContactActivity) mContext).selectedRowId.equalsIgnoreCase(item.id)) {
-                viewHolder.imgSelected.setVisibility(View.VISIBLE);
-                viewHolder.contactNameTxt.setTextColor(color);
-                viewHolder.imgSelected.setColorFilter(color);
             } else {
                 viewHolder.imgSelected.setVisibility(View.INVISIBLE);
                 int color_=mContext.getResources().getColor(R.color.black);
@@ -269,7 +264,6 @@ public class BookSomeOneContactListAdapter extends RecyclerView.Adapter<Recycler
                 Logger.d("SearchContact", "filteredList" + filterResults.values);
                 if (filterResults.values != null)
                     contactListFiltered = (ArrayList<ContactModel>) filterResults.values;
-                ((BookSomeOneElsePickContactActivity) mContext).mSectionList = contactListFiltered;
                 notifyDataSetChanged();
             }
         };
