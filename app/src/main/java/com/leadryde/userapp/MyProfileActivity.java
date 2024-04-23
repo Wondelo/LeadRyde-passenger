@@ -1,11 +1,13 @@
 package com.leadryde.userapp;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -29,8 +31,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import com.cropper.CropImage;
@@ -617,48 +621,14 @@ public class MyProfileActivity extends AppCompatActivity {
             Utils.hideKeyboard(getActContext());
             switch (view.getId()) {
                 case R.id.backImgView:
-
                     MyProfileActivity.super.onBackPressed();
                     break;
 
                 case R.id.userImgArea:
-                    if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                        ArrayList<String> requestPermissions = new ArrayList<>();
-                        requestPermissions.add(android.Manifest.permission.CAMERA);
-                        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                            requestPermissions.add(android.Manifest.permission.READ_MEDIA_IMAGES);
-                            requestPermissions.add(android.Manifest.permission.READ_MEDIA_VIDEO);
-                        } else {
-                            requestPermissions.add(android.Manifest.permission.READ_EXTERNAL_STORAGE);
-                        }
-                        if (generalFunc.isAllPermissionGranted(true,requestPermissions)) {
-                            if (!generalFunc.retrieveValue("IS_PROFILE_PHOTO_UPLOADED").equalsIgnoreCase("Yes")) {
-                                profilePhotoDialog.setVisibility(View.VISIBLE);
-                            } else {
-                                new ImageSourceDialog().run();
-                            }
-                        } else {
-                            generalFunc.showMessage(getCurrView(), "Allow this app to use camera.");
-                        }
-                    } else {
-                        if (generalFunc.isCameraStoragePermissionGranted()) {
-                            if (!generalFunc.retrieveValue("IS_PROFILE_PHOTO_UPLOADED").equalsIgnoreCase("Yes")) {
-                                profilePhotoDialog.setVisibility(View.VISIBLE);
-                            } else {
-                                new ImageSourceDialog().run();
-                            }
-                            //new ImageSourceDialog().run();
-                        } else {
-                            generalFunc.showMessage(getCurrView(), "Allow this app to use camera.");
-                        }
-                    }
-                    // TODO: 28-04-2021 / Viral | Android 11 (30) Store permission code remove | revert 29
-                    /*if (generalFunc.isCameraStoragePermissionGranted()) {
+                   if (isCameraStoragePermissionGranted())
                         new ImageSourceDialog().run();
-                    } else {
-                        generalFunc.showMessage(getCurrView(), "Allow this app to use camera.");
-                    }*/
-
+                    else
+                        showPermissionDisclosureDialog();
                     break;
 
                 case R.id.cancelTxt:
@@ -673,6 +643,81 @@ public class MyProfileActivity extends AppCompatActivity {
         }
     }
 
+    private boolean isCameraStoragePermissionGranted() {
+        return ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_GRANTED && isStoragePermissionGranted();
+    }
+
+    private boolean isStoragePermissionGranted() {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+           return ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_IMAGES)
+                    == PackageManager.PERMISSION_GRANTED &&
+                    ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_VIDEO)
+                            == PackageManager.PERMISSION_GRANTED;
+        } else {
+           return ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        }
+    }
+
+    private void showPermissionDisclosureDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Permission Request")
+                .setMessage("LeadRyde collects photos from your device to enable you to set a profile picture. " +
+                        "Please allow access to your camera and photos to personalise your profile picture.")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Request camera and storage permissions
+                        requestCameraAndStoragePermissions();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
+
+    private void requestCameraAndStoragePermissions() {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ArrayList<String> requestPermissions = new ArrayList<>();
+            requestPermissions.add(android.Manifest.permission.CAMERA);
+            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requestPermissions.add(android.Manifest.permission.READ_MEDIA_IMAGES);
+                requestPermissions.add(android.Manifest.permission.READ_MEDIA_VIDEO);
+            } else {
+                requestPermissions.add(android.Manifest.permission.READ_EXTERNAL_STORAGE);
+            }
+            if (generalFunc.isAllPermissionGranted(true,requestPermissions)) {
+                if (!generalFunc.retrieveValue("IS_PROFILE_PHOTO_UPLOADED").equalsIgnoreCase("Yes")) {
+                    profilePhotoDialog.setVisibility(View.VISIBLE);
+                } else {
+                    new ImageSourceDialog().run();
+                }
+            } else {
+               // generalFunc.showMessage(getCurrView(), "Allow this app to use camera.");
+            }
+        } else {
+            if (generalFunc.isCameraStoragePermissionGranted()) {
+                if (!generalFunc.retrieveValue("IS_PROFILE_PHOTO_UPLOADED").equalsIgnoreCase("Yes")) {
+                    profilePhotoDialog.setVisibility(View.VISIBLE);
+                } else {
+                    new ImageSourceDialog().run();
+                }
+                //new ImageSourceDialog().run();
+            } else {
+             //   generalFunc.showMessage(getCurrView(), "Allow this app to use camera.");
+            }
+        }
+        // TODO: 28-04-2021 / Viral | Android 11 (30) Store permission code remove | revert 29
+                    /*if (generalFunc.isCameraStoragePermissionGranted()) {
+                        new ImageSourceDialog().run();
+                    } else {
+                        generalFunc.showMessage(getCurrView(), "Allow this app to use camera.");
+                    }*/
+    }
 
     class ImageSourceDialog implements Runnable {
 
