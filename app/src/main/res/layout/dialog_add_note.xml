@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.view.MTextView
+                android:layout_toStartOf="@+id/imgCancel"
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                tools:text="Note to Driver / Admin"
+                android:textColor="@color/appThemeColor_1"
+                android:textSize="@dimen/_12ssp"
+                app:customTypeFace="@string/systemSemiBold" />
+
+            <ImageView
+                android:id="@+id/imgCancel"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_clear"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <LinearLayout
+                android:backgroundTint="@color/itemgray"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@drawable/add_note_border">
+
+                <com.view.editBox.MaterialEditText
+                    android:id="@+id/etNote"
+                    tools:text="Note to Driver / Admin"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    app:met_hideUnderline="true"
+                    android:textSize="@dimen/_12ssp"
+                    app:customTypeFace="@string/systemSemiBold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:visibility="visible">
+
+                <com.view.MTextView
+                    android:visibility="gone"
+                    android:id="@+id/btnCancel"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:text="Cancel "
+                    android:textColor="@color/appThemeColor_1"
+                    android:textSize="@dimen/txt_size_12"
+                    app:customTypeFace="@string/systemMediumFont" />
+
+                <com.view.MTextView
+                    android:id="@+id/btnDone"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_border"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:text="Done"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_12"
+                    app:customTypeFace="@string/systemSemiBold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_65sdp"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/_62sdp"
+    android:maxHeight="@dimen/_80sdp"
+    android:minWidth="@dimen/_60sdp"
+    android:id="@+id/llArea"
+ >
+
+    <RelativeLayout
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/firstrowview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38.5dp"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstrowview"
+            android:layout_marginTop="3dp"
+
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mainimagearea"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_centerHorizontal="true">
+
+            <FrameLayout
+                android:id="@+id/imagarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:visibility="gone"
+
+                        android:id="@+id/carTypeImgView"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:scaleType="centerCrop"
+                         />
+                    <ImageView
+                        android:rotationY="@integer/angleY_rtl_180"
+
+                      android:visibility="gone"
+                        android:id="@+id/carTypeImgViewrtl"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_centerInParent="true"
+                android:id="@+id/imagareaselcted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/carTypeImgViewselcted"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                      />
+                    <ImageView
+                        android:visibility="gone"
+                        android:rotationY="@integer/angleY_rtl_180"
+                        android:id="@+id/carTypeImgViewselctedrtl"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        />
+                </LinearLayout>
+
+
+
+
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/_minus8sdp"
+            android:id="@+id/carTypeTitle"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainimagearea"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+          android:maxLines="3"
+            android:minLines="3"
+            android:includeFontPadding="false"
+            android:text="cxhkjcbzxcjbx"
+            android:textColor="#000000"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="normal"
+        />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

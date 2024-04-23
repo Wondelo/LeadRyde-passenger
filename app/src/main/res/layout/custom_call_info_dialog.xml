@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.view.MTextView
+            android:id="@+id/tvCallInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="We are busy just now. Please call our dispatcher on"
+            android:fontFamily="@string/systemSemiBold"
+            app:customTypeFace="@string/systemSemiBold"
+            android:textColor="@color/black"
+            android:text="" />
+
+       <!-- <com.view.MTextView
+            android:id="@+id/tvCallInfoTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="+44-7777665545"
+            android:text="Text1" />
+
+        <com.view.MTextView
+            android:id="@+id/tvCallInfoThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Text1"
+            android:text="Text1" />-->
+    </LinearLayout>
+
+
+    <com.view.MTextView
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:gravity="center"
+        android:fontFamily="@string/systemSemiBold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="OK"
+        app:customTypeFace="@string/systemSemiBold"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

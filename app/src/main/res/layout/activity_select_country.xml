@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+
+    android:orientation="vertical">
+
+    <com.view.MTextView
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+
+        android:gravity="start"
+        android:visibility="visible"
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:padding="5dp"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_14"
+        app:customTypeFace="@string/robotobold" />
+
+    <LinearLayout
+        android:id="@+id/searcharea"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:backgroundTint="#ccd6dd"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/rect_rounded_corner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_search_black_24dp"
+                android:layout_width="wrap_content"
+                android:tint="@color/gray"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/searchTxt"
+                layout="@layout/editbox_form_design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              android:background="@null"
+                android:fontFamily="@string/systemRegular"
+                android:hint="search"
+                android:inputType="textNoSuggestions"
+                android:padding="5dp"
+                android:paddingEnd="25dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
+            <ImageView
+android:layout_marginEnd="@dimen/_10sdp"
+                android:visibility="invisible"
+                android:id="@+id/imageCancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+
+                android:src="@mipmap/ic_cancel_cab_request"
+                android:tint="@android:color/black" />
+
+        </LinearLayout>
+
+
+
+
+        <com.view.MTextView
+            android:visibility="gone"
+            android:id="@+id/cancelTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_14"
+            app:customTypeFace="roboto_light" />
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/toolbarArea"
+        layout="@layout/design_toolbar_general" />
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.view.pinnedListView.PinnedSectionListView
+            android:smoothScrollbar="true"
+            android:nestedScrollingEnabled="true"
+            android:id="@+id/country_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:divider="#dddddd"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            />
+
+        <com.view.MTextView
+            android:id="@+id/noResTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:textColor="#9F9F9F"
+            android:textSize="@dimen/txt_size_16"
+            android:visibility="gone"
+            app:customTypeFace="roboto_light" />
+
+        <com.view.MTextView
+            android:id="@+id/noData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:textColor="#9F9F9F"
+            android:textSize="@dimen/txt_size_16"
+            android:visibility="gone"
+            app:customTypeFace="roboto_light" />
+
+
+        <com.view.anim.loader.AVLoadingIndicatorView
+            android:id="@+id/loading"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_30sdp"
+            app:indicator="LineSpinFadeLoader"
+            app:indicator_color="@color/gray"
+            android:layout_height="@dimen/_30sdp"/>
+
+        <com.view.ErrorView
+            android:id="@+id/errorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

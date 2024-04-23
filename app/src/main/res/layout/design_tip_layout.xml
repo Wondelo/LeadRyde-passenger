@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="center">
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_12sdp"
+            android:id="@+id/tipAmountArea1"
+            android:background="@drawable/button"
+            android:minWidth="@dimen/_70sdp"
+            android:minHeight="35dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.view.MTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:id="@+id/tipAmountText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 10"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/closeImg1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_close_detail"
+                android:tint="@color/black" />
+
+        </LinearLayout>
+
+
+           <!--     <Button
+                    android:id="@+id/tipAmountText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/button"
+                    android:text="$ 10"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13sdp" />-->
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_8sdp"
+            android:id="@+id/tipAmountArea2"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/button"
+            android:minWidth="@dimen/_70sdp"
+            android:minHeight="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.view.MTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:id="@+id/tipAmountText2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="$ 50"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/closeImg2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_close_detail"
+                android:tint="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:id="@+id/tipAmountArea3"
+            android:background="@drawable/button"
+            android:minWidth="@dimen/_70sdp"
+            android:minHeight="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.view.MTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:id="@+id/tipAmountText3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="$ 100"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/closeImg3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_close_detail"
+                android:tint="@color/black" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:id="@+id/tipAmountAreaOther"
+            android:background="@drawable/button"
+            android:minWidth="@dimen/_70sdp"
+            android:minHeight="35dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.view.MTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:id="@+id/tipAmountTextOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/closeImgOther"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_close_detail"
+                android:tint="@color/black" />
+
+        </LinearLayout>
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/addTipArea"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/amountArea"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/roundrectwithdesign"
+>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_couponcode"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/tipAmountBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="start|center"
+            android:maxLines="1"
+            android:textSize="@dimen/_10ssp"
+            android:hint="Enter tip amount"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/tipBtnArea"
+                android:layout_gravity="end|center"
+                android:gravity="end|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.view.SelectableRoundedImageView
+                    android:visibility="visible"
+                    android:id="@+id/tipGivenBtn"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:sriv_left_bottom_corner_radius="@dimen/_33sdp"
+                    app:sriv_left_top_corner_radius="@dimen/_33sdp"
+                    app:sriv_right_bottom_corner_radius="@dimen/_33sdp"
+                    app:sriv_right_top_corner_radius="@dimen/_33sdp"
+                    android:layout_width="@dimen/_33sdp"
+                    app:sriv_border_color="@color/appThemeColor_1"
+                    app:sriv_border_width="5dip"
+                    android:layout_height="@dimen/_33sdp"/>
+
+                <ImageView
+                    android:tint="@color/appThemeColor_TXT_1"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_right_arrow"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"/>
+            </FrameLayout>
+
+        </FrameLayout>
+
+           <!-- <include
+                android:id="@+id/tipGivenBtn"
+                layout="@layout/btn_type_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+
+    </LinearLayout>
+
+    <com.view.MTextView
+        android:visibility="gone"
+        android:id="@+id/errorTxt"
+        android:textAllCaps="false"
+        android:textColor="@color/Red"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:text=""
+        android:textSize="@dimen/_12sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+/>
+
+
+    <com.view.MTextView
+        android:visibility="gone"
+        android:id="@+id/tv_percentageAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start|center"
+        android:textColor="#284552"
+        app:customTypeFace="@string/systemBold"
+        android:textSize="@dimen/txt_size_12" />
+
+</LinearLayout>

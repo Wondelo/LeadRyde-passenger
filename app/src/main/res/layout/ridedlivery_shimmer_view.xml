@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+
+        android:id="@+id/img_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_150sdp"
+
+
+        android:background="@drawable/shimmershape" />
+
+    <LinearLayout
+        android:id="@+id/itemArea"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_banner"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_60sdp"
+
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@+id/img_banner"
+
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:background="@drawable/shimmershape"
+
+                />
+            <View
+                android:layout_width="@dimen/_60sdp"
+
+                android:layout_height="@dimen/_10sdp"
+                android:layout_below="@+id/img_banner"
+
+
+                android:layout_marginTop="@dimen/_5sdp"
+
+                android:background="@drawable/shimmershape"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_60sdp"
+
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@+id/img_banner"
+
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:background="@drawable/shimmershape"
+
+                />
+            <View
+                android:layout_width="@dimen/_60sdp"
+
+                android:layout_height="@dimen/_10sdp"
+                android:layout_below="@+id/img_banner"
+
+
+                android:layout_marginTop="@dimen/_5sdp"
+
+                android:background="@drawable/shimmershape"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_60sdp"
+
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@+id/img_banner"
+
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:background="@drawable/shimmershape"
+
+                />
+            <View
+                android:layout_width="@dimen/_60sdp"
+
+                android:layout_height="@dimen/_10sdp"
+                android:layout_below="@+id/img_banner"
+
+                android:layout_marginTop="@dimen/_5sdp"
+
+                android:background="@drawable/shimmershape"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/whereArea"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+
+        android:layout_below="@+id/itemArea"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+
+
+        android:background="@drawable/shimmershape" />
+    <View
+
+        android:id="@+id/homearea"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:layout_below="@+id/whereArea"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_60sdp"
+
+
+        android:background="@drawable/shimmershape" />
+    <View
+
+        android:id="@+id/workArea"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:layout_below="@+id/homearea"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_60sdp"
+
+
+        android:background="@drawable/shimmershape" />
+    <View
+
+        android:id="@+id/maparea"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:layout_below="@+id/workArea"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_100sdp"
+
+
+        android:background="@drawable/shimmershape" />
+
+
+
+</RelativeLayout>

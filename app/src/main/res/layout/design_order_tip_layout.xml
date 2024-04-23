@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/imageArea"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_gravity="center"
+            android:background="@color/appThemeColor_1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iamage_source"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_4sdp"
+                app:srcCompat="@drawable/ic_save_money" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_giveTip"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_givetip" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="center">
+
+
+                <com.view.MTextView
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/tipTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Tip Your delivery partner"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+
+                        app:customTypeFace="@string/systemSemiBold" />
+
+                    <com.view.MTextView
+                        android:visibility="gone"
+                        android:id="@+id/tipDescHintTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="How it Works"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_12ssp"
+                        app:customTypeFace="@string/systemSemiBold" />
+
+                    <LinearLayout
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:textAlignment="center"
+                            android:visibility="visible"
+                            android:id="@+id/iv_tip_help"
+                            android:tint="@color/appThemeColor_1"
+                            app:srcCompat="@drawable/ic_question_mark"
+
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"/>
+                    </LinearLayout>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.view.MTextView
+                    android:visibility="gone"
+                    android:id="@+id/tipDescTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:ellipsize="marquee"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="Thank your delivery partner for helping you stay safe indoors.Support them through these tough times with a tip."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray_holo_dark"
+                    android:textSize="@dimen/_12ssp"
+                    app:customTypeFace="@string/systemRegular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           layout="@layout/design_tip_layout"/>
+
+        <include
+            android:id="@+id/giveTipArea"
+            layout="@layout/btn_type_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_btn_height"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp" />
+
+        <com.view.MTextView
+            android:id="@+id/noThanksArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="TRY LATER"
+            android:textColor="#284552"
+            app:customTypeFace="@string/systemRegular"
+            android:textSize="@dimen/txt_size_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.view.MTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="No thanks"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_16"
+                app:customTypeFace="@string/systemMediumFont" />
+
+            <com.view.MTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Give Tip"
+                android:textAllCaps="true"
+                android:textColor="@color/appThemeColor_1"
+                android:textSize="@dimen/txt_size_16"
+                app:customTypeFace="@string/systemMediumFont" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

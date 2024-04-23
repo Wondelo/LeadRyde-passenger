@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+
+        android:orientation="vertical"
+        android:id="@+id/headerArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:includeFontPadding="false"
+            android:textAlignment="viewEnd"
+            android:id="@+id/statusTxt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Deliverd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+
+            android:includeFontPadding="false"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/titleTxt"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:text="paws a little Reflective Collars (Mixed Colours)-Pack of 5
+,paws a little Reflective Collars (Mixed Colours)-Pack of 5"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         ></TextView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_below="@+id/headerArea"
+        android:id="@+id/trackview"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="end"
+        android:layout_below="@+id/trackview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:includeFontPadding="false"
+            android:textAlignment="viewStart"
+            android:visibility="gone"
+            android:id="@+id/viewdetailsTxt"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+
+            android:text="View Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          ></TextView>
+        <TextView
+            android:includeFontPadding="false"
+            android:textAlignment="viewEnd"
+            android:visibility="gone"
+            android:id="@+id/trackorderTxt"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:text="Track Order"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"></TextView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

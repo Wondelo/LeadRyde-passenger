@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_155sdp">
+
+    <ImageView
+        android:id="@+id/imagView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+
+    <com.view.MTextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text=""
+        android:textAlignment="viewStart"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        app:customTypeFace="@string/systemSemiBold" />
+
+    <com.view.MTextView
+        android:textAlignment="viewStart"
+        android:includeFontPadding="false"
+        android:id="@+id/subTitleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTxt"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:customTypeFace="@string/systemRegular" />
+
+    <com.view.MTextView
+        android:textAlignment="viewStart"
+        android:id="@+id/btnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subTitleTxt"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/roundcolorect"
+        android:paddingStart="@dimen/_22sdp"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_22sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        app:customTypeFace="@string/systemSemiBold">
+
+    </com.view.MTextView>
+</RelativeLayout>

@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "917130177426",
+    "firebase_url": "https://vsystem-leadryde-firebase-default-rtdb.firebaseio.com",
+    "project_id": "vsystem-leadryde-firebase",
+    "storage_bucket": "vsystem-leadryde-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917130177426:android:d292c9caefe282d3ad6f4b",
+        "android_client_info": {
+          "package_name": "com.leadryde.driverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917130177426-e919bakv1vb7ufdmep1sft3p35bs3k4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.leadryde.driverapp",
+            "certificate_hash": "09162e62458fd9d838ce4c3ff3708e5f47d7597a"
+          }
+        },
+        {
+          "client_id": "917130177426-jp8b54pr8bvrgcbn566r8bip8cdcsa66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd0apquFvMgaqKq-3zPgcQENW9xuCSdmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917130177426-jp8b54pr8bvrgcbn566r8bip8cdcsa66.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917130177426-9127unaajuhdn2v473ipt6ceko5loks5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.leadryde.kiosk"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917130177426:android:c52289791ea11da2ad6f4b",
+        "android_client_info": {
+          "package_name": "com.leadryde.kiosk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917130177426-ebl7abkfs26h0ijisso3uk1c2cqvpioj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.leadryde.kiosk",
+            "certificate_hash": "e12fd70463e4c891c64ad8786fa766ade065c453"
+          }
+        },
+        {
+          "client_id": "917130177426-jp8b54pr8bvrgcbn566r8bip8cdcsa66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd0apquFvMgaqKq-3zPgcQENW9xuCSdmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917130177426-jp8b54pr8bvrgcbn566r8bip8cdcsa66.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917130177426-9127unaajuhdn2v473ipt6ceko5loks5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.leadryde.kiosk"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917130177426:android:14d5f734b90daed9ad6f4b",
+        "android_client_info": {
+          "package_name": "com.leadryde.userapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917130177426-it3sv1ff96sqgff0ktho82gm9jls5q0h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.leadryde.userapp",
+            "certificate_hash": "09162e62458fd9d838ce4c3ff3708e5f47d7597a"
+          }
+        },
+        {
+          "client_id": "917130177426-jp8b54pr8bvrgcbn566r8bip8cdcsa66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd0apquFvMgaqKq-3zPgcQENW9xuCSdmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917130177426-jp8b54pr8bvrgcbn566r8bip8cdcsa66.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917130177426-9127unaajuhdn2v473ipt6ceko5loks5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.leadryde.kiosk"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

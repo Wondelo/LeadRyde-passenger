@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/headerArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAlignment="viewEnd"
+            android:id="@+id/statusTxt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Deliverd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/titleTxt"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:text="paws a little Reflective Collars (Mixed Colours)-Pack of 5
+,paws a little Reflective Collars (Mixed Colours)-Pack of 5"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbars="horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/headerArea"
+        android:id="@+id/trackview"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

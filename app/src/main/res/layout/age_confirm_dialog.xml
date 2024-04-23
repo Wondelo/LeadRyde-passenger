@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cancelImg"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_clear" />
+
+        <ImageView
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_155sdp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_45sdp"
+            app:srcCompat="@drawable/ic_age_confirm" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_minus20sdp"
+        android:orientation="vertical">
+
+        <com.view.MTextView
+            android:layout_marginTop="@dimen/_15sdp"
+            android:includeFontPadding="false"
+            android:text="age confirm"
+            android:id="@+id/subTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:gravity="center"
+            android:textColor="#363636"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="visible"
+            app:customTypeFace="@string/systemSemiBold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="horizontal"
+            >
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:id="@+id/confirmChkBox"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:buttonTint="@color/appThemeColor_1"
+                android:theme="@style/MyCheckBox" />
+
+            <com.view.MTextView
+                android:id="@+id/confirmTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="start"
+                android:text="Confirm that you are 18"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/_14ssp"
+                app:customTypeFace="@string/systemRegular" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:alpha="0.4"
+            android:id="@+id/confirmlayout"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/border_fill"
+            android:layout_weight="1"
+            android:padding="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.view.MTextView
+
+                android:id="@+id/submitTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/appThemeColor_1"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="Confirm"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                app:customTypeFace="@string/systemMediumFont" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>
