@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class CommonUtilities {
 
     public static final String TOLLURL = "https://fleet.api.here.com/2/calculateroute.json?app_id=";
+    //public static final String SERVER = "https://www.v3cprojectsdemo.com/deploy/leadryde/";
     //public static final String SERVER = "https://www.leadryde.com/beta/";
     //public static final String SERVER = "https://www.leadryde.com/";
     public static final String SERVER = "https://app.leadryde.com/";

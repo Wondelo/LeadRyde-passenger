@@ -27,8 +27,8 @@ android {
         applicationId "com.leadryde.userapp"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 18
-        versionName "3.1"
+        versionCode 21
+        versionName "3.3"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         renderscriptTargetApi 28

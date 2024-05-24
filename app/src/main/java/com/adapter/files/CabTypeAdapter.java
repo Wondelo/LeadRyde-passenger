@@ -119,7 +119,7 @@ public class CabTypeAdapter extends RecyclerView.Adapter<CabTypeAdapter.ViewHold
 
         String total_fare = item.get("total_fare");
         if (total_fare != null && !total_fare.equals("")) {
-            viewHolder.totalfare.setText(generalFunc.convertNumberWithRTL(total_fare));
+            viewHolder.totalfare.setText(generalFunc.retrieveLangLBl("", "LBL_EST_TXT") +" "+ generalFunc.convertNumberWithRTL(total_fare));
         } else {
             viewHolder.infoimage.setVisibility(View.GONE);
             viewHolder.totalfare.setText("");

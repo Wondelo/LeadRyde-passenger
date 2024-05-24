@@ -139,6 +139,7 @@ public class AdditionalChargeActivity extends BaseActivity {
         String fMiscFee = getIntent().getStringExtra("fMiscFee");
         String fDriverDiscount = getIntent().getStringExtra("fDriverDiscount");
         String serviceCost = getIntent().getStringExtra("serviceCost");
+        String fEstTripGenerateFare = getIntent().getStringExtra("fEstTripGenerateFare");
         String fOtherAmount = getIntent().getStringExtra("fOtherCharges");
         String fTollAmount = getIntent().getStringExtra("fTollPrice");
         String totalAmount = getIntent().getStringExtra("totalAmount");
@@ -150,7 +151,8 @@ public class AdditionalChargeActivity extends BaseActivity {
         miscfeeVTxt.setText(Utils.checkText(fMiscFee) ?"" + new AppFunctions(getActContext()).formatNumAsPerCurrency(generalFunc,fMiscFee.replace(CurrencySymbol,""),CurrencySymbol,true):"");
         discountVTxt.setText(Utils.checkText(fDriverDiscount) ? "" + new AppFunctions(getActContext()).formatNumAsPerCurrency(generalFunc,fDriverDiscount.replace(CurrencySymbol,"")
                 ,CurrencySymbol,true):"");
-        currentchargeVTxt.setText(Utils.checkText(serviceCost) ? "" + new AppFunctions(getActContext()).formatNumAsPerCurrency(generalFunc,serviceCost.replace(CurrencySymbol,""),CurrencySymbol,true):"");
+        currentchargeVTxt.setText(Utils.checkText(fEstTripGenerateFare) ? "" + new AppFunctions(getActContext()).formatNumAsPerCurrency(generalFunc,fEstTripGenerateFare.replace(CurrencySymbol,""),CurrencySymbol,true):"");
+        /*currentchargeVTxt.setText(Utils.checkText(serviceCost) ? "" + new AppFunctions(getActContext()).formatNumAsPerCurrency(generalFunc,serviceCost.replace(CurrencySymbol,""),CurrencySymbol,true):"");*/
         finalvalTxt.setText(Utils.checkText(totalAmount) ? "" + new AppFunctions(getActContext()).formatNumAsPerCurrency(generalFunc,totalAmount.replace(CurrencySymbol,""),CurrencySymbol,true):"");
 
         String eApproveRequestSentByDriver=getIntent().getStringExtra("eApproveRequestSentByDriver");
@@ -172,7 +174,7 @@ public class AdditionalChargeActivity extends BaseActivity {
         {
             isTollOrOtherCharges=true;
             tollFeelayout.setVisibility(View.VISIBLE);
-            serviceCostShowArea.setVisibility(View.GONE);
+            //serviceCostShowArea.setVisibility(View.GONE);
             materialFeeLayout.setVisibility(View.GONE);
             miscFeelayout.setVisibility(View.GONE);
             discountArea.setVisibility(View.GONE);
@@ -182,7 +184,7 @@ public class AdditionalChargeActivity extends BaseActivity {
         {
             isTollOrOtherCharges=true;
             otherFeelayout.setVisibility(View.VISIBLE);
-            serviceCostShowArea.setVisibility(View.GONE);
+            //serviceCostShowArea.setVisibility(View.GONE);
             materialFeeLayout.setVisibility(View.GONE);
             miscFeelayout.setVisibility(View.GONE);
             discountArea.setVisibility(View.GONE);

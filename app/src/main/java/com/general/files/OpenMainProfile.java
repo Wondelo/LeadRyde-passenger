@@ -243,6 +243,8 @@ public class OpenMainProfile {
                         bn.putSerializable("TRIP_DATA", map);
                         bn.putString("eType", generalFun.getJsonValueStr("eType", Last_trip_data));
                         bn.putString("CurrencySymbol", generalFun.getJsonValueStr("CurrencySymbol", Last_trip_data));
+                        bn.putString("fEstTripGenerateFare", generalFun.getJsonValueStr("fEstTripGenerateFare", Last_trip_data));
+                        bn.putString("fEstTripGenerateFareWithSymbol", generalFun.getJsonValueStr("fEstTripGenerateFareWithSymbol", Last_trip_data));
                         bn.putBoolean("isnotification", false);
                         bn.putString("isFromToll", "Yes");
                         new StartActProcess(mContext).startActWithData(AdditionalChargeActivity.class, bn);
@@ -326,6 +328,8 @@ public class OpenMainProfile {
                         bn.putSerializable("TRIP_DATA", map);
                         bn.putString("eType", generalFun.getJsonValueStr("eType", Last_trip_data));
                         bn.putString("CurrencySymbol", generalFun.getJsonValueStr("CurrencySymbol", Last_trip_data));
+                        bn.putString("fEstTripGenerateFare", generalFun.getJsonValueStr("fEstTripGenerateFare", Last_trip_data));
+                        bn.putString("fEstTripGenerateFareWithSymbol", generalFun.getJsonValueStr("fEstTripGenerateFareWithSymbol", Last_trip_data));
                         bn.putBoolean("isnotification", false);
                         bn.putString("isFromToll", "Yes");
                         new StartActProcess(mContext).startActWithData(AdditionalChargeActivity.class, bn);
@@ -389,6 +393,8 @@ public class OpenMainProfile {
                         bn.putBoolean("isnotification", false);
                         bn.putString("CurrencySymbol", generalFun.getJsonValueStr("CurrencySymbol", Last_trip_data));
 
+                        bn.putString("fEstTripGenerateFare", generalFun.getJsonValueStr("fEstTripGenerateFare", Last_trip_data));
+                        bn.putString("fEstTripGenerateFareWithSymbol", generalFun.getJsonValueStr("fEstTripGenerateFareWithSymbol", Last_trip_data));
                         new StartActProcess(mContext).startActWithData(AdditionalChargeActivity.class, bn);
                     } else {
                         bn.putBoolean("isnotification", isnotification);
