@@ -123,7 +123,6 @@ dependencies {
     //implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     // TODO | Local Calling Enable
     implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib.aar', 'yalgaar.aar'], dir: 'libs')
-    implementation 'org.webrtc:google-webrtc:1.0.32006'
     // TODO | Local Calling Disable
     //implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib_v.aar', 'yalgaar.aar'], dir: 'libs')
 

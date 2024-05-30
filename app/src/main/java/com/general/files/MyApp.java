@@ -32,7 +32,6 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.multidex.MultiDex;
 
 import com.facebook.appevents.AppEventsLogger;
-import com.general.call.LocalHandler;
 import com.general.call.SinchHandler;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.leadryde.userapp.AccountverificationActivity;
@@ -565,7 +564,7 @@ public class MyApp extends Application {
     private void removeVoIpSettings() {
         try {
             SinchHandler.getInstance().removeInitiateService();
-            LocalHandler.getInstance().disconnect();
+          //  LocalHandler.getInstance().disconnect();
         } catch (Exception e) {
 
         }
