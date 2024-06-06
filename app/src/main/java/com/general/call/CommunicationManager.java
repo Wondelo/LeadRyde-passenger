@@ -108,7 +108,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().initiateService();
                 break;
             case LOCAL:
-                LocalHandler.getInstance().initiateService(mName, mImage);
+            //    LocalHandler.getInstance().initiateService(mName, mImage);
                 break;
             case DEFAULT:
                 DefaultCommunicationHandler.getInstance().initiateService();
@@ -157,7 +157,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().executeAction(mContext, communication_type, dataProvider);
                 break;
             case LOCAL:
-                LocalHandler.getInstance().executeAction(mContext, communication_type, dataProvider);
+            //    LocalHandler.getInstance().executeAction(mContext, communication_type, dataProvider);
                 break;
             case DEFAULT:
                 DefaultCommunicationHandler.getInstance().executeAction(mContext, TYPE.PHONE_CALL, dataProvider);
@@ -292,7 +292,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().setListener(callScreen, V3CallListener);
                 break;
             case LOCAL:
-                LocalHandler.getInstance().setListener(callScreen, V3CallListener);
+             //   LocalHandler.getInstance().setListener(callScreen, V3CallListener);
                 break;
         }
     }
@@ -306,7 +306,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().setUIListener(dataProvider, callScreen, v3CallScreen);
                 break;
             case LOCAL:
-                LocalHandler.getInstance().setUIListener(dataProvider,callScreen, v3CallScreen);
+           //     LocalHandler.getInstance().setUIListener(dataProvider,callScreen, v3CallScreen);
                 break;
         }
     }
@@ -320,7 +320,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().muteBtnClicked();
                 break;
             case LOCAL:
-                LocalHandler.getInstance().muteBtnClicked(isMute);
+            //    LocalHandler.getInstance().muteBtnClicked(isMute);
                 break;
         }
     }
@@ -334,7 +334,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().speakerBtnClicked(isSpeaker);
                 break;
             case LOCAL:
-                LocalHandler.getInstance().speakerBtnClicked(isSpeaker);
+           //     LocalHandler.getInstance().speakerBtnClicked(isSpeaker);
                 break;
         }
     }
@@ -348,7 +348,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().switchCameraBtnClicked();
                 break;
             case LOCAL:
-                LocalHandler.getInstance().switchCameraBtnClicked();
+            //    LocalHandler.getInstance().switchCameraBtnClicked();
                 break;
         }
     }
@@ -362,7 +362,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().getTwilioAccessToken(true);
                 break;
             case LOCAL:
-                LocalHandler.getInstance().doAnswer();
+             //   LocalHandler.getInstance().doAnswer();
                 break;
         }
     }
@@ -377,7 +377,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().sendNotification(true);
                 break;
             case LOCAL:
-                LocalHandler.getInstance().hangUpCall();
+           //     LocalHandler.getInstance().hangUpCall();
                 break;
         }
     }
@@ -391,7 +391,7 @@ public class CommunicationManager {
                 TwilioHandler.getInstance().setEstablishedAfterUI();
                 break;
             case LOCAL:
-                LocalHandler.getInstance().setEstablishedAfterUI(isMute, isSpeaker, isSpeakerClick, isFront);
+            //    LocalHandler.getInstance().setEstablishedAfterUI(isMute, isSpeaker, isSpeakerClick, isFront);
                 break;
         }
     }
