@@ -123,6 +123,7 @@ dependencies {
     //implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     // TODO | Local Calling Enable
     implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib.aar', 'yalgaar.aar'], dir: 'libs')
+    implementation 'org.webrtc:google-webrtc:1.0.32006'
     // TODO | Local Calling Disable
     //implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib_v.aar', 'yalgaar.aar'], dir: 'libs')
 
@@ -237,8 +238,8 @@ dependencies {
     implementation 'com.github.shuhart:stepview:1.5.1'
     implementation group: 'com.pubnub', name: 'pubnub-gson', version: '5.2.0'
 
-    implementation 'com.twilio:video-android:7.0.3'
-    implementation "com.github.ethanhua:Skeleton:ff06517d4629e87328c41a1cce614c490ed7fb51"
+    implementation 'com.twilio:video-android:7.0.0'
+    implementation 'com.ethanhua:skeleton:1.1.2'
     implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
 apply plugin: 'com.google.gms.google-services'
