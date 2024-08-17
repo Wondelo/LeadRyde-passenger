@@ -1,5 +1,7 @@
 package com.utils;
 
+import com.leadryde.userapp.BuildConfig;
+
 import java.util.ArrayList;
 
 public class CommonUtilities {
@@ -9,7 +11,8 @@ public class CommonUtilities {
     //public static final String SERVER = "https://www.leadryde.com/beta/";
     //public static final String SERVER = "https://www.leadryde.com/";
    // public static final String SERVER = "https://app.leadryde.com/";
-    public static final String SERVER = "https://demo.leadryde.com/";
+   // public static final String SERVER = "https://demo.leadryde.com/";
+    public static final String SERVER = BuildConfig.BASE_URL;
     public static final String SERVER_FOLDER_PATH = "";
     //public static final String WEBSERVICE = "webservice_shark.php";
     public static final String WEBSERVICE = "webservice_shark_v2.php";
