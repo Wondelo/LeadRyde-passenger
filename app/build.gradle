@@ -113,7 +113,6 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib.aar', 'yalgaar.aar'], dir: 'libs')
-    implementation 'org.webrtc:google-webrtc:1.0.32006'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
@@ -186,7 +185,7 @@ dependencies {
     implementation group: 'com.pubnub', name: 'pubnub-gson', version: '5.2.0'
 
     implementation 'com.twilio:video-android:7.0.0'
-    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation "com.github.ethanhua:Skeleton:ff06517d4629e87328c41a1cce614c490ed7fb51"
     implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
 
