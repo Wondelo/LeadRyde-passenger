@@ -76,31 +76,13 @@ android {
             signingConfig signingConfigs.config
         }
     }
-
     packagingOptions {
-        exclude 'lib/arm64-v8a/libcardioDecider.so'
-        exclude 'lib/arm64-v8a/libcardioRecognizer.so'
-        exclude 'lib/arm64-v8a/libcardioRecognizer_tegra2.so'
-        exclude 'lib/arm64-v8a/libopencv_core.so'
-        exclude 'lib/arm64-v8a/libopencv_imgproc.so'
-        exclude 'lib/armeabi/libcardioDecider.so'
-        exclude 'lib/armeabi-v7a/libcardioDecider.so'
-        exclude 'lib/armeabi-v7a/libcardioRecognizer.so'
-        exclude 'lib/armeabi-v7a/libcardioRecognizer_tegra2.so'
-        exclude 'lib/armeabi-v7a/libopencv_core.so'
-        exclude 'lib/armeabi-v7a/libopencv_imgproc.so'
-        exclude 'lib/mips/libcardioDecider.so'
-        exclude 'lib/x86/libcardioDecider.so'
-        exclude 'lib/x86/libcardioRecognizer.so'
-        exclude 'lib/x86/libcardioRecognizer_tegra2.so'
-        exclude 'lib/x86/libopencv_core.so'
-        exclude 'lib/x86/libopencv_imgproc.so'
-        exclude 'lib/x86_64/libcardioDecider.so'
-        exclude 'lib/x86_64/libcardioRecognizer.so'
-        exclude 'lib/x86_64/libcardioRecognizer_tegra2.so'
-        exclude 'lib/x86_64/libopencv_core.so'
-        exclude 'lib/x86_64/libopencv_imgproc.so'
+        jniLibs {
+            excludes += ['lib/arm64-v8a/libcardioDecider.so', 'lib/arm64-v8a/libcardioRecognizer.so', 'lib/arm64-v8a/libcardioRecognizer_tegra2.so', 'lib/arm64-v8a/libopencv_core.so', 'lib/arm64-v8a/libopencv_imgproc.so', 'lib/armeabi/libcardioDecider.so', 'lib/armeabi-v7a/libcardioDecider.so', 'lib/armeabi-v7a/libcardioRecognizer.so', 'lib/armeabi-v7a/libcardioRecognizer_tegra2.so', 'lib/armeabi-v7a/libopencv_core.so', 'lib/armeabi-v7a/libopencv_imgproc.so', 'lib/mips/libcardioDecider.so', 'lib/x86/libcardioDecider.so', 'lib/x86/libcardioRecognizer.so', 'lib/x86/libcardioRecognizer_tegra2.so', 'lib/x86/libopencv_core.so', 'lib/x86/libopencv_imgproc.so', 'lib/x86_64/libcardioDecider.so', 'lib/x86_64/libcardioRecognizer.so', 'lib/x86_64/libcardioRecognizer_tegra2.so', 'lib/x86_64/libopencv_core.so', 'lib/x86_64/libopencv_imgproc.so']
+        }
     }
+
+    namespace 'com.leadryde.userapp'
 }
 
 repositories {
