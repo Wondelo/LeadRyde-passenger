@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 apply plugin: 'com.google.firebase.crashlytics'
 
-
 android {
     configurations {
 //        all*.exclude group: 'com.squareup.okhttp', module: 'okhttp'
@@ -23,6 +22,7 @@ android {
     }
     compileSdkVersion 33
     buildToolsVersion '33.0.0'
+
     defaultConfig {
         applicationId "com.leadryde.userapp"
         minSdkVersion 21
@@ -39,20 +39,22 @@ android {
         jumboMode true
     }
     productFlavors {
-        dev {
-            // dev utilizes minSDKVersion = 21 to allow the Android gradle plugin
-            // to pre-dex each module and produce an APK that can be tested on
-            // Android Lollipop without time consuming dex merging processes.
+        staging {
+            dimension "default"
             minSdkVersion 21
+            buildConfigField "String", "BASE_URL", "\"https://demo.leadryde.com\""
         }
+
         prod {
-            // The actual minSdkVersion for the application.
             minSdkVersion 21
+            buildConfigField "String", "BASE_URL", "\"https://app.leadryde.com\""
         }
     }
+
     dexOptions {
         javaMaxHeapSize "4g"
     }
+
     buildTypes {
         release {
             debuggable false
@@ -63,6 +65,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
+
         debug {
             debuggable true
             buildConfigField "String", "USER_TYPE", "\"Passenger\""
@@ -122,8 +125,7 @@ repositories {
 dependencies {
     //implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     // TODO | Local Calling Enable
-    implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib.aar', 'yalgaar.aar'], dir: 'libs')
-    implementation 'org.webrtc:google-webrtc:1.0.32006'
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     // TODO | Local Calling Disable
     //implementation fileTree(include: ['*.jar', 'projectlibfile.aar', 'sinch_lib_v.aar', 'yalgaar.aar'], dir: 'libs')
 
@@ -239,7 +241,6 @@ dependencies {
     implementation group: 'com.pubnub', name: 'pubnub-gson', version: '5.2.0'
 
     implementation 'com.twilio:video-android:7.0.0'
-    implementation 'com.ethanhua:skeleton:1.1.2'
     implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
 apply plugin: 'com.google.gms.google-services'
